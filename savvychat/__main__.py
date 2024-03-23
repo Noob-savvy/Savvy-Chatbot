@@ -6,7 +6,7 @@ from pyrogram import idle
 from savvychat import LOGGER, savvychat
 from savvychat.modules import ALL_MODULES
 
-LOGGER_ID = 
+LOGGER_ID = -1002055978397
 
 async def Savvy_boot():
     try:
