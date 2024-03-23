@@ -23,6 +23,7 @@ boot = time.time()
 mongo = MongoCli(config.MONGO_URL)
 db = mongo.Anonymous
 OWNER = config.OWNER_ID
+LOGGER_ID = config.LOGGER_ID
 filters = filters  # This re-exports filters
 
 class savvychat(Client):
