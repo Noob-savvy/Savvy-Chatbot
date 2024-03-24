@@ -45,4 +45,4 @@ class nexichat(Client):
         await super().stop()
 
 
-savvychat =savvychat()
+savvychat = savvychat()
