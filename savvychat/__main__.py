@@ -1,15 +1,15 @@
-import asyncio
+limport asyncio
 import importlib
 
 from pyrogram import idle
 
-from savvychat import LOGGER, nexichat
+from savvychat import LOGGER, savvychat
 from savvychat.modules import ALL_MODULES
 
 
 async def anony_boot():
     try:
-        await nexichat.start()
+        await savvychat.start()
     except Exception as ex:
         LOGGER.error(ex)
         quit(1)
