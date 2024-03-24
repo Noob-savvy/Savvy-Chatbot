@@ -10,6 +10,7 @@ from pyrogram import filters
 import config
 from .logging import LOGGER
 
+LOGGER = logging.getLogger(__name__)
 boot = time.time()
 mongo = MongoCli(config.MONGO_URL)
 db = mongo.Anonymous
