@@ -15,7 +15,6 @@ from savvychat.modules.helpers import (
     DEV_OP,
     HELP_BTN,
     HELP_READ,
-    SOURCE_READ,
     START,
     TOOLS_DATA_READ,
 )
@@ -36,12 +35,6 @@ async def cb_handler(_, query: CallbackQuery):
         await query.message.edit(
             text=START,
             reply_markup=InlineKeyboardMarkup(DEV_OP),
-        )
-    elif query.data == "SOURCE":
-        await query.message.edit(
-            text=SOURCE_READ,
-            reply_markup=InlineKeyboardMarkup(BACK),
-            disable_web_page_preview=True,
         )
     elif query.data == "ABOUT":
         await query.message.edit(
