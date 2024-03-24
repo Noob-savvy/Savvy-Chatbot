@@ -8,7 +8,7 @@ from pyrogram.enums import ParseMode
 from pyrogram import filters
 
 import config
-from .logging import LOGGER
+from .logger import LOGGER
 
 LOGGER = logging.getLogger(__name__)
 boot = time.time()
