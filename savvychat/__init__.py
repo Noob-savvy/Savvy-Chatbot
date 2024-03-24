@@ -22,7 +22,7 @@ mongo = MongoCli(config.MONGO_URL)
 db = mongo.Anonymous
 OWNER = config.OWNER_ID
 
-class nexichat(Client):
+class savvychat(Client):
     def __init__(self):
         super().__init__(
             name="savvychat",
