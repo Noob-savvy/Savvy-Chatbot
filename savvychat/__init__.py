@@ -8,7 +8,7 @@ from pyrogram.enums import ParseMode
 from pyrogram import filters
 
 import config
-
+from .logging import LOGGER
 
 boot = time.time()
 mongo = MongoCli(config.MONGO_URL)
