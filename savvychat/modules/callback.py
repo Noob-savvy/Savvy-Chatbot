@@ -15,7 +15,6 @@ from savvychat.modules.helpers import (
     DEV_OP,
     HELP_BTN,
     HELP_READ,
-    MUSIC_BACK_BTN,
     SOURCE_READ,
     START,
     TOOLS_DATA_READ,
@@ -53,7 +52,7 @@ async def cb_handler(_, query: CallbackQuery):
     elif query.data == "ADMINS":
         await query.message.edit(
             text=ADMIN_READ,
-            reply_markup=InlineKeyboardMarkup(MUSIC_BACK_BTN),
+            reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
     elif query.data == "TOOLS_DATA":
         await query.message.edit(
