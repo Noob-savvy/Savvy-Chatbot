@@ -1,4 +1,4 @@
-import logging 
+
 import time
 from Abg import patch
 
@@ -9,19 +9,7 @@ from pyrogram import filters
 
 import config
 
-#logger
 
-logging.basicConfig(
-    format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
-    datefmt="%d-%b-%y %H:%M:%S",
-    handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
-    level=logging.INFO,
-)
-
-# exporting of modules
-
-logging.getLogger("pyrogram").setLevel(logging.ERROR)
-LOGGER = logging.getLogger(__name__)
 boot = time.time()
 mongo = MongoCli(config.MONGO_URL)
 db = mongo.Anonymous
