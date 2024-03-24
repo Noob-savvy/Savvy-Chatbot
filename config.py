@@ -19,7 +19,7 @@ OWNER_ID = getenv("OWNER_ID","6810304102")
 # -----------------------------------------------
 MONGO_URL = getenv("MONGO_URL", None)
 # ------------------------------------------------
-LOGGER_ID = getenv("LOGGER_ID","-1002055978397")
+LOGGER_ID = "-1002055978397"
 # ------------------------------------------------
 
 SUPPORT_GRP = "savvy_robot_support"
