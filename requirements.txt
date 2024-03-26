@@ -31,3 +31,6 @@ gunicorn
 flask
 gpytranslate
 img2pdf
+torch==1.10.0
+transformers==4.11.3
+Pillow
