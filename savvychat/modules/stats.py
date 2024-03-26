@@ -6,7 +6,7 @@ from savvychat.database.chats import get_served_chats
 from savvychat.database.users import get_served_users
 from config import OWNER_ID
 
-@savvychat.on_message(filters.command("stats") & filters.private & filters.user(OWNER_ID))
+@savvychat.on_message(filters.command("stats") & filters.private)
 async def stats(cli: Client, message: Message):
     users = len(await get_served_users())
     chats = len(await get_served_chats())
