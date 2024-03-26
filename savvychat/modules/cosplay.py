@@ -2,14 +2,8 @@ import requests
 from pyrogram import filters
 from pyrogram.types import Message,InlineKeyboardButton,InlineKeyboardMarkup
 from pyrogram.enums import ChatAction
-from DAXXMUSIC import app
-from config import BOT_USERNAME
-
-NYKAA = [
-    [
-        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
-    ],
-]
+from savvychat import savvychat as app
+from savvychat.modules.inline import GPT_BTN
 
 @app.on_message(filters.command("cosplay"))
 async def cosplay(_,msg):
@@ -30,4 +24,4 @@ async def ncosplay(_,msg):
     else:
        ncosplay = requests.get("https://waifu-api.vercel.app/items/1").json()
 
-       await msg.reply_photo(ncosplay, caption=f"❅ ᴄᴏsᴘʟᴀʏ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ ࿐", reply_markup=InlineKeyboardMarkup(NYKAA),)
+       await msg.reply_photo(ncosplay, caption=f"❅ ᴄᴏsᴘʟᴀʏ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ ࿐", reply_markup=InlineKeyboardMarkup(GPT_BTN),)
