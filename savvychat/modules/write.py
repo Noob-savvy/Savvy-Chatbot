@@ -14,7 +14,7 @@ async def handwrite(_, message: Message):
 
     caption = f"""
 sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [savvychat.name]([https://t.me/savvychat.username])
+#✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [app.name](https://t.me/[app.username])
 🥀 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
 """
     await m.delete()
