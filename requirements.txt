@@ -30,3 +30,4 @@ numpy
 gunicorn
 flask
 gpytranslate
+img2pdf
