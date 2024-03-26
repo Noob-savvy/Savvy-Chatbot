@@ -4,7 +4,7 @@ from asyncio import sleep
 from pyrogram import Client, filters
 from pyrogram import enums, filters
 
-from DAXXMUSIC import app
+from savvychat import savvychat as app
 
 @app.on_message(~filters.private & filters.command(["groupdata"]), group=2)
 async def instatus(app, message):
@@ -15,7 +15,7 @@ async def instatus(app, message):
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
-        sent_message = await message.reply_text("Annie's Gathering Information...")
+        sent_message = await message.reply_text(" Gathering Information...")
         deleted_acc = 0
         premium_acc = 0
         banned = 0
