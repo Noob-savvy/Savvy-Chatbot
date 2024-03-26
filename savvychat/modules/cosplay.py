@@ -3,7 +3,7 @@ from pyrogram import filters
 from pyrogram.types import Message,InlineKeyboardButton,InlineKeyboardMarkup
 from pyrogram.enums import ChatAction
 from savvychat import savvychat as app
-from savvychat.modules.inline import GPT_BTN
+from savvychat.modules.helpers.inline import GPT_BTN
 
 @app.on_message(filters.command("cosplay"))
 async def cosplay(_,msg):
