@@ -8,7 +8,7 @@ from savvychat.modules.helpers.inline import GPT_BTN
 @app.on_message(filters.command("cosplay"))
 async def cosplay(_,msg):
     img = requests.get("https://waifu-api.vercel.app").json()
-    await msg.reply_photo(img, caption=f"❅ ᴄᴏsᴘʟᴀʏ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ ༗", reply_markup=InlineKeyboardMarkup(NYKAA),)
+    await msg.reply_photo(img, caption=f"❅ ᴄᴏsᴘʟᴀʏ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) ", reply_markup=InlineKeyboardMarkup(GPT_BTN),)
 
 
 
@@ -24,4 +24,4 @@ async def ncosplay(_,msg):
     else:
        ncosplay = requests.get("https://waifu-api.vercel.app/items/1").json()
 
-       await msg.reply_photo(ncosplay, caption=f"❅ ᴄᴏsᴘʟᴀʏ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ ࿐", reply_markup=InlineKeyboardMarkup(GPT_BTN),)
+       await msg.reply_photo(ncosplay, caption=f"❅ ᴄᴏsᴘʟᴀʏ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) ", reply_markup=InlineKeyboardMarkup(GPT_BTN),)
