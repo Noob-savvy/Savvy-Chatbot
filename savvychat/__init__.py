@@ -18,8 +18,10 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 LOGGER = logging.getLogger(__name__)
 boot = time.time()
-mongo = MongoCli(config.MONGO_URL)
+mongo = MongoCli(config.MONGO_DB_URL)
 db = mongo.Anonymous
+Mongo = MongoCli(config.MONGO_URL)
+Db = Mongo.Savvy
 OWNER = config.OWNER_ID
 
 class savvychat(Client):
