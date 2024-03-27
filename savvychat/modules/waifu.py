@@ -40,21 +40,21 @@ async def get_husbando_data(tags):
 
 @savvychat.on_message(filters.command("waifu"))
 async def waifu_command(client, message):
-    await message.delete()
+  await message.delete()
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
   
-  try:  
-    tags = ['maid','waifu']
-    waifu_data = await get_waifu_data(tags)
+    try:  
+      tags = ['maid','waifu']
+      waifu_data = await get_waifu_data(tags)
 
-    if waifu_data and 'images' in waifu_data:
-      first_image = waifu_data['images'][0]
-      image_url = first_image['url']
-      await message.reply_photo(image_url, caption=f"❀ ʜᴇʏ{chutiya}, ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴡᴀɪғᴜ \n ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username})") 
-    else:
-      await message.reply_text("No waifu found with the specified tags.")
+      if waifu_data and 'images' in waifu_data:
+        first_image = waifu_data['images'][0]
+        image_url = first_image['url']
+        await message.reply_photo(image_url, caption=f"❀ ʜᴇʏ{chutiya}, ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴡᴀɪғᴜ \n ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username})") 
+      else:
+        await message.reply_text("No waifu found with the specified tags.")
   
   except Exception as e:
     print(e)
