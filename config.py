@@ -17,7 +17,9 @@ OWNER_USERNAME = "cute_divuu"
 # -------------------------------------------
 OWNER_ID = getenv("OWNER_ID","6810304102")
 # -----------------------------------------------
-MONGO_URL = getenv("MONGO_URL", None)
+MONGO_URL = "mongodb+srv://ashwani:ASHWANI@ashwani.iwidhpg.mongodb.net/?retryWrites=true&w=majority"
+# mongo url for chatbot and mong db url for other works
+MONGO_DB_URL = getenv("MONGO_DB_URL", None)
 # ------------------------------------------------
 LOGGER_ID = "-1002055978397"
 # ------------------------------------------------
