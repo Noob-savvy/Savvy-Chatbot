@@ -18,7 +18,7 @@ async def ncosplay(_,msg):
       await msg.reply_text("❍ sᴏʀʀʏ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ ᴡɪᴛʜ ʙᴏᴛ",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("ɢᴏ ᴘᴍ",url=f"https://t.me/{app.me.username}?start=True")]
+                [InlineKeyboardButton("ɢᴏ ᴘᴍ",url=f"https://t.me/{app.username}?start=True")]
             ]
         ))
     else:
