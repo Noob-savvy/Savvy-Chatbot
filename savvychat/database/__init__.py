@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 import config
 
-Savvydb = MongoClient(config.MONGO_URL)
+Savvydb = MongoClient(config.MONGO_DB_URL)
 Savvy = Savvydb["SavvyDb"]["Savvy"]
 
 
