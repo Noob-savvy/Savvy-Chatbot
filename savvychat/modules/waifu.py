@@ -48,7 +48,7 @@ async def waifu_command(client, message):
     if waifu_data and 'images' in waifu_data:
       first_image = waifu_data['images'][0]
       image_url = first_image['url']
-      await message.reply_photo(image_url, caption="Here is your waifu baby!") 
+      await message.reply_photo(image_url, caption=f"❀ ʜᴇʏ{message.from_user.mention}, ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴡᴀɪғᴜ \n ᴘᴏᴡᴇʀᴇᴅ ʙʏ ") 
     else:
       await message.reply_text("No waifu found with the specified tags.")
   
