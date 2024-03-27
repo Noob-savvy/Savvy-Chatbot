@@ -28,7 +28,7 @@ async def chat_gpt(bot, message):
                     end_time = time.time()
                     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
                     await message.reply_text(
-                         f"♥︎ {x}  \n\n✦ ᴀɴsᴡᴇʀɪɴɢ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username})",
+                         f"➢ {x}  \n\n✦ ᴀɴsᴡᴇʀɪɴɢ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) \n\n✦ ᴀɪ ᴍᴏᴅᴇʟ ➠ [ᴄʜᴀᴛ-ɢᴘᴛ](https://chat.openai.ai) ",
                         parse_mode=ParseMode.MARKDOWN
                     )
                 else:
