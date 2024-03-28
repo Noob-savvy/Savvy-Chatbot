@@ -40,7 +40,7 @@ async def get_husbando_data(tags):
 
 @savvychat.on_message(filters.command("waifu"))
 async def waifu_command(client, message):
-  await message.delete()
+    await message.delete()
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
