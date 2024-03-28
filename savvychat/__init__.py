@@ -23,6 +23,7 @@ db = mongo.Anonymous
 Mongo = MongoCli(config.MONGO_URL)
 Db = Mongo.Savvy
 OWNER = config.OWNER_ID
+LOGGER_ID = config.LOGGER_ID
 
 class savvychat(Client):
     def __init__(self):
