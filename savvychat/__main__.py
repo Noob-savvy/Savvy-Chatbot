@@ -16,9 +16,12 @@ async def anony_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("savvychat.modules." + all_module)
 
-    LOGGER.info(f"@{savvychat.username} Started.")
+    LOGGER.info(f"Successfully imported all modules.....")
+    
     await idle()
-
+    await savvychat.stop()
+    LOGGER.info("Stopping savvychat Bot...")
+    
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(anony_boot())
-    LOGGER.info("Stopping savvychat Bot...")
+    
