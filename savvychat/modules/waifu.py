@@ -56,9 +56,9 @@ async def waifu_command(client, message):
       else:
         await message.reply_text("No waifu found with the specified tags.")
   
-  except Exception as e:
-    print(e)
-    await message.reply_text("An internal error occurred!")
+     except Exception as e:
+       print(e)
+       await message.reply_text("An internal error occurred!")
 
 
 #========================= husbando ====================================#
