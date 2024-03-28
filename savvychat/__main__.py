@@ -18,7 +18,7 @@ async def anony_boot():
         importlib.import_module("savvychat.modules." + all_module)
 
     LOGGER.info(f"@{savvychat.username} Started.")
-    await self.send_message(
+    await savvychat.send_message(
                 chat_id=LOGGER_ID,
                 text=f"<u><b>» {savvychat.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b><u>\n\nɪᴅ : <code>{savvychat.id}</code>\nɴᴀᴍᴇ : {savvychat.name}\nᴜsᴇʀɴᴀᴍᴇ : @{savvychat.username}",
             )
