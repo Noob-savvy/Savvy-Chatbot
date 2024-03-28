@@ -18,13 +18,20 @@ async def anony_boot():
         importlib.import_module("savvychat.modules." + all_module)
 
     LOGGER.info(f"@{savvychat.username} Started.")
+    # Check if the chat exists
+chat = await savvychat.get_chat("LOGGER_ID")
+if chat 
     await savvychat.send_message(
-                chat_id=LOGGER_ID,
+               chat_id=LOGGER_ID,
                 text=f"<u><b>» {savvychat.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b><u>\n\nɪᴅ : <code>{savvychat.id}</code>\nɴᴀᴍᴇ : {savvychat.name}\nᴜsᴇʀɴᴀᴍᴇ : @{savvychat.username}",
-            )
-    await idle()
+                  )
+      else:
+            print("Chat does not exist.")
+
+   await idle()
 
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(anony_boot())
     LOGGER.info("Stopping savvychat Bot...")
+ 
