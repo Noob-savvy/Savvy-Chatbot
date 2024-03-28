@@ -1,7 +1,7 @@
 import requests
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.types import ChatType  # Import ChatType from pyrogram.types
+from pyrogram.enums import * # Import ChatType from pyrogram.types
 from savvychat import savvychat as app
 from savvychat.modules.helpers.inline import GPT_BTN
 
