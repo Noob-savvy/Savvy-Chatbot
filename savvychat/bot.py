@@ -3,7 +3,7 @@ from pyrogram.enums import ChatMemberStatus, ParseMode
 from Abg import patch
 import config
 
-from savvychat.logging import LOGGER
+from savvychat.logger import LOGGER
 
 
 class savvychat(Client):
