@@ -36,7 +36,7 @@ async def get_husbando_data(tags):
         print("API Error:", e)
         return None
 
-savvychat = Client(...)
+
 
 @savvychat.on_message(filters.command("waifu"))
 async def waifu_command(client, message):
@@ -62,7 +62,7 @@ async def waifu_command(client, message):
 @savvychat.on_message(filters.command("husbando"))
 async def husbando_command(client, message):
     try:
-        tags = ['servant']
+        tags = ['servant','neko']
         husbando_data = await get_husbando_data(tags)
 
         if husbando_data and 'images' in husbando_data:
