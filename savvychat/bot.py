@@ -1,6 +1,7 @@
 import sys
 
 from pyrogram import Client
+from pyrogram.enums import ParseMode
 from savvychat.logger import LOGGER
 import config
 
@@ -15,7 +16,7 @@ class savvychat(Client):
             bot_token=config.BOT_TOKEN,
             lang_code="en",
             in_memory=True,
-            parse_mode=ParseMode.HTML,
+            parse_mode=ParseMode.DEFAULT,
             max_concurrent_transmissions=7,
         )
 
