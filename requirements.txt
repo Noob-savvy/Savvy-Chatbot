@@ -31,6 +31,4 @@ gunicorn
 flask
 gpytranslate
 img2pdf
-torch
-transformers
-Pillow
+
