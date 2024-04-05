@@ -38,7 +38,7 @@ class savvychat(Client):
         LOGGER(__name__).info(f"Bot Started as {self.name}")
         try:
             await self.send_message(
-                config.LOGGER_ID, f"**» {self.name} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.id}`\n❄ ɴᴀᴍᴇ : {self.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.username}"
+                config.LOGGER_ID, f"**»ʙᴏᴛ sᴛᴀʀᴛᴇᴅ**"
             )
         except:
             LOGGER(__name__).error(
