@@ -21,7 +21,7 @@ MONGO_URL = "mongodb+srv://ashwani:ASHWANI@ashwani.iwidhpg.mongodb.net/?retryWri
 # mongo url for chatbot and mong db url for other works
 MONGO_DB_URL = getenv("MONGO_DB_URL", None)
 # ------------------------------------------------
-LOGGER_ID = "-1002055978397"
+LOGGER_ID = -1002055978397
 # ------------------------------------------------
 
 SUPPORT_GRP = "savvy_robot_support"
