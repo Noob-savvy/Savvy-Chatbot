@@ -2,7 +2,7 @@ import asyncio
 import importlib
 import sys
 
-from pyrogram import idle
+from pyrogram import idle, errors
 
 from savvychat import LOGGER, savvychat
 from savvychat.modules import ALL_MODULES
