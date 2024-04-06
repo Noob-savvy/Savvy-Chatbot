@@ -1,25 +1,28 @@
 
 import random
-from Abg.chat_status import adminsOnly
 
 from pymongo import MongoClient
 from pyrogram import Client, filters
-from pyrogram.enums import ChatAction
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 from config import MONGO_URL
 from savvychat import savvychat
 from savvychat.modules.helpers import CHATBOT_ON, is_admins
 
+# Custom filter function to check if the user is an admin
+def is_admin(_, __, message: Message):
+    chat_id = message.chat.id
+    user_id = message.from_user.id
+    return is_admins(chat_id, user_id)
 
-@savvychat.on_cmd("chatbot", group_only=True)
-@adminsOnly("can_delete_messages")
+@savvychat.on_message(filters.command("chatbot") & filters.group & is_admin)
 async def chaton_(_, m: Message):
     await m.reply_text(
         f"ᴄʜᴀᴛ: {m.chat.title}\n**ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ᴛᴏ ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ.**",
         reply_markup=InlineKeyboardMarkup(CHATBOT_ON),
     )
-    return
+
+
 
 
 @savvychat.on_message(
