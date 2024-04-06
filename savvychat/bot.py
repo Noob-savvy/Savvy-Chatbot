@@ -25,23 +25,22 @@ class savvychat(Client):
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
-        if get_me.last_name:
-            self.name = get_me.first_name + " " + get_me.last_name
-        else:
-            self.name = get_me.first_name
-        a = await self.get_chat_member(config.LOGGER_ID, self.id)
-        if a.status != "administrator":
-            LOGGER(__name__).error(
-                "Please promote Bot as Admin in Logger Group"
-            )
-            sys.exit()
-        LOGGER(__name__).info(f"Bot Started as {self.name}")
         try:
             await self.send_message(
-                config.LOGGER_ID, f"**»ʙᴏᴛ sᴛᴀʀᴛᴇᴅ**"
+                config.LOGGER_ID, "» ᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ, ᴡᴀɪᴛɪɴɢ ғᴏʀ ᴀssɪsᴛᴀɴᴛ..."
             )
         except:
             LOGGER(__name__).error(
                 "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
             )
             sys.exit()
+        a = await self.get_chat_member(config.LOGGER_ID, self.id)
+        if a.status != ChatMemberStatus.ADMINISTRATOR:
+            LOGGER(__name__).error("Please promote Bot as Admin in Logger Group")
+            sys.exit()
+        if get_me.last_name:
+            self.name = get_me.first_name + " " + get_me.last_name
+        else:
+            self.name = get_me.first_name
+        LOGGER(__name__).info(f"Bot Started as {self.name}")
+
