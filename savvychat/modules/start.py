@@ -78,7 +78,7 @@ EMOJIOS = [
 
 #---------------EMOJIOS---------------#
 def is_command(command: str):
-    async def func(_, __, m: Message):
+    async def func(_, m: Message):
         return m.text and m.text.startswith(f"/{command}")
     return filters.create(func)
 
