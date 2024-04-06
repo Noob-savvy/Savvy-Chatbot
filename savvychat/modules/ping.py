@@ -56,7 +56,7 @@ def is_command(command: str):
         return m.text and m.text.startswith(f"/{command}")
     return filters.create(func)
 
-@savvychat.on_message(is_command("ping")
+@savvychat.on_message(is_command("ping"))
 async def ping(_, message: Message):
     start = datetime.now()
     loda = await message.reply_photo(
