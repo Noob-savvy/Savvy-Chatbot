@@ -3,7 +3,12 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import * # Import ChatType from pyrogram.types
 from savvychat import savvychat as app
-from savvychat.modules.helpers.inline import GPT_BTN
+
+GPT_BTN = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
 
 @app.on_message(filters.command("cosplay"))
 async def cosplay(_, msg):
