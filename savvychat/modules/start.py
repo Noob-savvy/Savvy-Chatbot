@@ -84,7 +84,7 @@ def is_command(commands: Union[str, List[str]]):
     return filters.create(func)
 
 @savvychat.on_message(is_command(["start", "aistart"]))
-async def start(_, __, m: Message):
+async def start(_, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
