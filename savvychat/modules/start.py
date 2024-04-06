@@ -123,7 +123,7 @@ ________________________________________
     else:
         await m.reply_photo(
             photo=random.choice(IMG),
-            caption=START.format(chutiya),
+            caption=_[START].format(chutiya),
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
         # Assuming these functions are defined somewhere
