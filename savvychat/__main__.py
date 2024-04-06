@@ -18,8 +18,8 @@ async def Savvy_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("savvychat.modules." + all_module)
        
-    LOGGER.info(f"Imported all modules successfully.......")
-    LOGGER.info(f"@{savvychat.username} is alive now..")
+    LOGGER(__name__).info(f"Imported all modules successfully.......")
+    LOGGER(__name__).info(f"@{savvychat.username} is alive now..")
     
     await idle()
 
