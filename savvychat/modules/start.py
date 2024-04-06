@@ -85,6 +85,9 @@ def is_command(commands: Union[str, List[str]]):
 
 @savvychat.on_message(is_command(["start", "aistart"]))
 async def start(_, m: Message):
+     user_id = message.from_user.id
+     user_name = message.from_user.first_name
+     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
@@ -102,7 +105,7 @@ async def start(_, m: Message):
         await umm.delete()
         await m.reply_text(
             text=f"""
-๏ ʜᴇʏ, {m.from_user.id}
+๏ ʜᴇʏ, {chutiya}
 ɪ ᴀᴍ {savvychat.name}💞
 ʏᴏᴜʀ ᴀɪ ᴄᴏᴍᴘᴀɴɪᴏɴ.
 ʟᴇᴛ'ꜱ ᴄʜᴀᴛ ᴀɴᴅ ᴇxᴘʟᴏʀᴇ.
@@ -120,8 +123,8 @@ ________________________________________
     else:
         await m.reply_photo(
             photo=random.choice(IMG),
-            caption=START.format(m.from_user.id),
-            reply_markup=InlineKeyboardMarkup(HELP_START),
+            caption=START.format(chutiya),
+            reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
         # Assuming these functions are defined somewhere
         await add_served_chat(m.chat.id)
