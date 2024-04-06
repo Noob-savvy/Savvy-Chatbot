@@ -1,7 +1,7 @@
 import sys
 
 from pyrogram import Client
-from pyrogram.enums import ParseMode
+from pyrogram.enums import ParseMode, ChatMemberStatus
 from savvychat.logger import LOGGER
 import config
 
