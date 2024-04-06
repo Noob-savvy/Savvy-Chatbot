@@ -1,6 +1,6 @@
 import asyncio
 import importlib
-import sys
+
 
 from pyrogram import idle, errors
 
@@ -20,7 +20,7 @@ async def Savvy_boot():
        
     LOGGER.info(f"Imported all modules successfully.......")
     LOGGER.info(f"@{savvychat.username} is alive now..")
-    sys.exit()
+    
     await idle()
 
 
