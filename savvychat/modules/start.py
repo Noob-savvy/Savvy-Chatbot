@@ -77,13 +77,18 @@ EMOJIOS = [
 
 
 #---------------EMOJIOS---------------#
-def is_command(command: str):
-    async def func(_,__, m: Message):
-        return m.text and m.text.startswith(f"/{command}")
+def is_command(commands: Union[str, List[str]]):
+    async def func(_, __, m: Message):
+        if isinstance(commands, str):
+            return m.text and m.text.startswith(f"/{commands}")
+        elif isinstance(commands, list):
+            return m.text and any(m.text.startswith(f"/{cmd}") for cmd in commands)
+        return False
+
     return filters.create(func)
 
 @savvychat.on_message(is_command(["start", "aistart"]))
-async def start(_,__, m: Message):
+async def start(_, __, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
@@ -100,8 +105,8 @@ async def start(_,__, m: Message):
         await asyncio.sleep(2)
         await umm.delete()
         await m.reply_text(
-            text="""
-๏ ʜᴇʏ,(m.from_user.id)
+            text=f"""
+๏ ʜᴇʏ, {m.from_user.id}
 ɪ ᴀᴍ {savvychat.name}💞
 ʏᴏᴜʀ ᴀɪ ᴄᴏᴍᴘᴀɴɪᴏɴ.
 ʟᴇᴛ'ꜱ ᴄʜᴀᴛ ᴀɴᴅ ᴇxᴘʟᴏʀᴇ.
@@ -114,6 +119,7 @@ ________________________________________
 ________________________________________ 
  """
         )
+        # Assuming these functions are defined somewhere
         await add_served_user(m.from_user.id)
     else:
         await m.reply_photo(
@@ -121,6 +127,7 @@ ________________________________________
             caption=START.format(m.from_user.id),
             reply_markup=InlineKeyboardMarkup(HELP_START),
         )
+        # Assuming these functions are defined somewhere
         await add_served_chat(m.chat.id)
 
 
