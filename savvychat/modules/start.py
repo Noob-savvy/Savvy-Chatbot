@@ -77,8 +77,12 @@ EMOJIOS = [
 
 
 #---------------EMOJIOS---------------#
+def is_command(command: str):
+    async def func(_, __, m: Message):
+        return m.text and m.text.startswith(f"/{command}")
+    return filters.create(func)
 
-@savvychat.on_cmd(["start", "aistart"])
+@savvychat.on_message(is_command(["start", "aistart"])
 async def start(_, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
@@ -109,7 +113,12 @@ async def start(_, m: Message):
         await add_served_chat(m.chat.id)
 
 
-@savvychat.on_cmd("help")
+def is_command(command: str):
+    async def func(_, __, m: Message):
+        return m.text and m.text.startswith(f"/{command}")
+    return filters.create(func)
+
+@savvychat.on_message(is_command("help")
 async def help(client: savvychat, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         hmm = await m.reply_photo(
