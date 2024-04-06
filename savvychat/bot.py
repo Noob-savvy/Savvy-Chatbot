@@ -27,7 +27,7 @@ class savvychat(Client):
         self.id = get_me.id
         try:
             await self.send_message(
-                config.LOGGER_ID, "» ᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ, ᴡᴀɪᴛɪɴɢ ғᴏʀ ᴀssɪsᴛᴀɴᴛ..."
+                config.LOGGER_ID, "» ᴀɪ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ,ᴇɴᴊᴏʏ sᴇᴀᴍʟᴇss ᴄʜᴀᴛs ɪɴ ɢʀᴏᴜᴘs ᴀɴᴅ ᴘʀɪᴠᴀᴛᴇ"
             )
         except:
             LOGGER(__name__).error(
