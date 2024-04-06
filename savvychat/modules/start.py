@@ -85,9 +85,9 @@ def is_command(commands: Union[str, List[str]]):
 
 @savvychat.on_message(is_command(["start", "aistart"]))
 async def start(_, m: Message):
-     user_id = message.from_user.id
-     user_name = message.from_user.first_name
-     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    user_id = message.from_user.id
+    user_name = message.from_user.first_name
+    chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
