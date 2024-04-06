@@ -78,12 +78,12 @@ EMOJIOS = [
 
 #---------------EMOJIOS---------------#
 def is_command(command: str):
-    async def func(_, m: Message):
+    async def func(_,__, m: Message):
         return m.text and m.text.startswith(f"/{command}")
     return filters.create(func)
 
 @savvychat.on_message(is_command(["start", "aistart"]))
-async def start(_, m: Message):
+async def start(_,__, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
