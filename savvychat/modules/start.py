@@ -118,7 +118,7 @@ ________________________________________
     else:
         await m.reply_photo(
             photo=random.choice(IMG),
-            caption=START,
+            caption=START.format(m.from_user.id),
             reply_markup=InlineKeyboardMarkup(HELP_START),
         )
         await add_served_chat(m.chat.id)
