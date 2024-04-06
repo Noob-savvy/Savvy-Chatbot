@@ -1,13 +1,9 @@
-
-
 import asyncio
 import random
-
+from typing import Union, List
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardMarkup, Message
-
-
 from savvychat import savvychat
 from savvychat.database.chats import add_served_chat
 from savvychat.database.users import add_served_user
