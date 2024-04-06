@@ -1,10 +1,14 @@
 from pyrogram import filters
-from pyrogram.enums import ParseMode
+from pyrogram.types import Message
 
 from savvychat import savvychat
 
+def is_command(command: str):
+    async def func(_, __, m: Message):
+        return m.text and m.text.startswith(f"/{command}")
+    return filters.create(func)
 
-@savvychat.on_cmd("id")
+@savvychat.on_message(is_command("id"))
 async def getid(client, message):
     chat = message.chat
     your_id = message.from_user.id
