@@ -103,7 +103,8 @@ async def start(_, m: Message):
         umm = await m.reply_sticker(sticker=random.choice(STICKER))
         await asyncio.sleep(2)
         await umm.delete()
-        await m.reply_text(
+        await m.reply_photo(
+            photo=random.choice(IMG),
             text=f"""
 ๏ ʜᴇʏ, {chutiya}
 ɪ ᴀᴍ {savvychat.name}💞
@@ -116,7 +117,7 @@ async def start(_, m: Message):
 ________________________________________ 
  ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛʏᴘᴇ /help ɪɴ ᴍʏ ᴘᴍ
 ________________________________________ 
- """
+ """        
         )
         # Assuming these functions are defined somewhere
         await add_served_user(m.from_user.id)
