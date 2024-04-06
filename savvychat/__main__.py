@@ -26,4 +26,4 @@ async def Savvy_boot():
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(Savvy_boot())
-    LOGGER.info("Stopping savvychat Bot...")
+    LOGGER(__name__).info("Stopping savvychat Bot...")
