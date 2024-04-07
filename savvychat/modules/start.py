@@ -126,7 +126,7 @@ async def start(_, m: Message):
 
         await m.reply_photo(
             photo=random.choice(IMG),
-            caption=_[START].format(chutiya),
+            caption=START.format(chutiya),
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
         # Assuming these functions are defined somewhere
