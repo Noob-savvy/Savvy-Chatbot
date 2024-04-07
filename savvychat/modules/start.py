@@ -117,12 +117,12 @@ async def start(_, m: Message):
 #ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʟɪꜱᴛᴇɴ ᴀɴᴅ ᴇɴɢᴀɢᴇ ɪɴ ᴍᴇᴀɴɪɴɢꜰᴜʟ ᴅɪꜱᴄᴜꜱꜱɪᴏɴꜱ ᴡɪᴛʜ ʏᴏᴜ 
 #________________________________________ 
 # ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛʏᴘᴇ /help ɪɴ ᴍʏ ᴘᴍ
-________________________________________ 
+#________________________________________ 
 # """        
         )
         # Assuming these functions are defined somewhere
       #  await add_served_user(m.from_user.id)
-    else:
+  #  else:
 
         await m.reply_photo(
             photo=random.choice(IMG),
