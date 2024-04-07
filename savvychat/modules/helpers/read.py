@@ -2,7 +2,7 @@ from config import OWNER_USERNAME, SUPPORT_GRP
 from savvychat import savvychat
 
 START = """
-๏ ʜᴇʏ,{}
+๏ ʜᴇʏ,{chutiya}
 ɪ ᴀᴍ {savvychat.name}💞
 ʏᴏᴜʀ ᴀɪ ᴄᴏᴍᴘᴀɴɪᴏɴ.
 ʟᴇᴛ'ꜱ ᴄʜᴀᴛ ᴀɴᴅ ᴇxᴘʟᴏʀᴇ.
