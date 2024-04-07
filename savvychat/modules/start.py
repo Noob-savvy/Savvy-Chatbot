@@ -88,7 +88,7 @@ async def start(_, m: Message):
     user_id = m.from_user.id
     user_name = m.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
-    NAME = [f"[{savvychat.name}](https://t.me/{savvychat.username})"]
+    NAME = f"[{savvychat.name}](https://t.me/{savvychat.username})"
 
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
