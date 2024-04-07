@@ -118,7 +118,7 @@ async def start(_, m: Message):
 #________________________________________ 
 # ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛʏᴘᴇ /help ɪɴ ᴍʏ ᴘᴍ
 ________________________________________ 
- """        
+# """        
         )
         # Assuming these functions are defined somewhere
       #  await add_served_user(m.from_user.id)
