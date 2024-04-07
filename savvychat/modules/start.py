@@ -102,26 +102,28 @@ async def start(_, m: Message):
         await accha.delete()
         umm = await m.reply_sticker(sticker=random.choice(STICKER))
         await asyncio.sleep(2)
-        await umm.delete()
-        await m.reply_photo(
-            photo=random.choice(IMG),
-            text=f"""
-๏ ʜᴇʏ, {chutiya}
-ɪ ᴀᴍ {savvychat.name}💞
-ʏᴏᴜʀ ᴀɪ ᴄᴏᴍᴘᴀɴɪᴏɴ.
-ʟᴇᴛ'ꜱ ᴄʜᴀᴛ ᴀɴᴅ ᴇxᴘʟᴏʀᴇ.
-ᴛʜᴇ ᴅᴇᴘᴛʜꜱ ᴏꜰ ᴄᴏɴᴠᴇʀꜱᴀᴛɪᴏɴ ᴛᴏɢᴇᴛʜᴇʀ!
-ꜰᴇᴇʟ ꜰʀᴇᴇ ᴛᴏ ᴀꜱᴋ ᴍᴇ ᴀɴʏᴛʜɪɴɢ ᴏʀ ꜱʜᴀʀᴇ 
-ʏᴏᴜʀ ᴛʜᴏᴜɢʜᴛꜱ.
-ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʟɪꜱᴛᴇɴ ᴀɴᴅ ᴇɴɢᴀɢᴇ ɪɴ ᴍᴇᴀɴɪɴɢꜰᴜʟ ᴅɪꜱᴄᴜꜱꜱɪᴏɴꜱ ᴡɪᴛʜ ʏᴏᴜ 
-________________________________________ 
- ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛʏᴘᴇ /help ɪɴ ᴍʏ ᴘᴍ
+        await umm.delete(
+
+#        await m.reply_photo(
+#           photo=random.choice(IMG),
+#            text=f"""
+#๏ ʜᴇʏ, {chutiya}
+#ɪ ᴀᴍ {savvychat.name}💞
+#ʏᴏᴜʀ ᴀɪ ᴄᴏᴍᴘᴀɴɪᴏɴ.
+#ʟᴇᴛ'ꜱ ᴄʜᴀᴛ ᴀɴᴅ ᴇxᴘʟᴏʀᴇ.
+#ᴛʜᴇ ᴅᴇᴘᴛʜꜱ ᴏꜰ ᴄᴏɴᴠᴇʀꜱᴀᴛɪᴏɴ ᴛᴏɢᴇᴛʜᴇʀ!
+#ꜰᴇᴇʟ ꜰʀᴇᴇ ᴛᴏ ᴀꜱᴋ ᴍᴇ ᴀɴʏᴛʜɪɴɢ ᴏʀ ꜱʜᴀʀᴇ 
+#ʏᴏᴜʀ ᴛʜᴏᴜɢʜᴛꜱ.
+#ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʟɪꜱᴛᴇɴ ᴀɴᴅ ᴇɴɢᴀɢᴇ ɪɴ ᴍᴇᴀɴɪɴɢꜰᴜʟ ᴅɪꜱᴄᴜꜱꜱɪᴏɴꜱ ᴡɪᴛʜ ʏᴏᴜ 
+#________________________________________ 
+# ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛʏᴘᴇ /help ɪɴ ᴍʏ ᴘᴍ
 ________________________________________ 
  """        
         )
         # Assuming these functions are defined somewhere
-        await add_served_user(m.from_user.id)
+      #  await add_served_user(m.from_user.id)
     else:
+
         await m.reply_photo(
             photo=random.choice(IMG),
             caption=_[START].format(chutiya),
