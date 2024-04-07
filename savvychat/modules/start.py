@@ -88,6 +88,7 @@ async def start(_, m: Message):
     user_id = m.from_user.id
     user_name = m.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    NAME = [savvychat.name](t.me/(savvychat.username))
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
@@ -126,7 +127,7 @@ async def start(_, m: Message):
 
         await m.reply_photo(
             photo=random.choice(IMG),
-            caption=START,
+            caption=START.format(chutiya,NAME),
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
         # Assuming these functions are defined somewhere
