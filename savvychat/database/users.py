@@ -22,3 +22,8 @@ async def add_served_user(user_id: int):
     if is_served:
         return
     return await usersdb.insert_one({"user_id": user_id})
+    
+
+async def del_user(user_id: int):
+    await user_data.delete_one({'_id': user_id})
+    return
