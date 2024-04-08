@@ -9,12 +9,7 @@ from config import MONGO_URL
 from savvychat import savvychat
 from savvychat.modules.helpers import CHATBOT_ON, is_admins
 
-# Custom filter function to check if the user is an admin
-def is_admin(message: Message):
-    chat_id = message.chat.id
-    user_id = message.from_user.id
-    return is_admins(chat_id, user_id)
-
+# Custom filter function to check if the user is an adm
 @savvychat.on_message(filters.command("chatbot") & filters.group & is_admin)
 async def chaton_(_, m: Message):
     await m.reply_text(
