@@ -4,8 +4,8 @@ from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from savvychat import savvychat, OWNER
-from savvychat.database.chats import get_served_chat
-from savvychat.database.users import get_served_user, del_user
+from savvychat.database.chats import get_served_chats
+from savvychat.database.users import get_served_users, del_user
 
 #==========================================================================================================================
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
