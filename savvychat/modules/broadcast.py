@@ -17,6 +17,7 @@ async def send_text(client: savvychat, message: Message):
     if message.reply_to_message:
         chats = await get_served_chats()
         users = await get_served_users()
+        savvy = list(set(chats + users))
         broadcast_msg = message.reply_to_message
         total = 0
         successful = 0
@@ -25,7 +26,7 @@ async def send_text(client: savvychat, message: Message):
         unsuccessful = 0
 
         pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
-        for chat_id in chats:
+        for chat_id in savvy:
             try:
                 await broadcast_msg.copy(chat_id)
                 successful += 1
