@@ -10,6 +10,14 @@ from savvychat import savvychat
 from savvychat.modules.helpers import CHATBOT_ON, is_admins
 
 # Custom filter function to check if the user is an adm
+
+async def is_admin(client, m: Message):
+    chat_id = m.chat.id
+    user_id = m.from_user.id
+    chat_member = await client.get_chat_member(chat_id, user_id)
+    return chat_member.status in ["creator", "administrator"]
+
+
 @savvychat.on_message(filters.command("chatbot") & filters.group & is_admin)
 async def chaton_(_, m: Message):
     await m.reply_text(
