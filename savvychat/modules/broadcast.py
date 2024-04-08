@@ -5,7 +5,7 @@ from pyrogram.types import Message
 from pyrogram import Client, filters
 from savvychat import savvychat, OWNER
 from savvychat.database.chats import get_served_chat
-from savvychat.database.users import get_served_user
+from savvychat.database.users import get_served_user, del_user
 
 #==========================================================================================================================
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
@@ -34,10 +34,10 @@ async def send_text(client: savvychat, message: Message):
                 await broadcast_msg.copy(chat_id)
                 successful += 1
             except UserIsBlocked:
-                await remove_served_chat(chat_id)
+                await del_user(chat_id)
                 blocked += 1
             except InputUserDeactivated:
-                await remove_served_chat(chat_id)
+                await del_user(chat_id)
                 deleted += 1
             except:
                 unsuccessful += 1
