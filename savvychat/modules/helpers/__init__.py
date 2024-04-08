@@ -7,7 +7,7 @@ from savvychat import OWNER, savvychat
 
 
 def is_admins(func: Callable) -> Callable:
-    async def non_admin(c: nexichat, m: Message):
+    async def non_admin(c: savvychat, m: Message):
         if m.from_user.id == OWNER:
             return await func(c, m)
 
