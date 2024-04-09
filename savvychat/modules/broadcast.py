@@ -26,24 +26,25 @@ async def send_text(client: savvychat, message: Message):
         unsuccessful = 0
 
         pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
-        for chat_id in savvy:
-            try:
-                await broadcast_msg.copy(chat_id)
-                successful += 1
-            except FloodWait as e:
-                await asyncio.sleep(e.x)
-                await broadcast_msg.copy(chat_id)
-                successful += 1
-            except UserIsBlocked:
-                await del_user(chat_id)
-                blocked += 1
-            except InputUserDeactivated:
-                await del_user(chat_id)
-                deleted += 1
-            except:
-                unsuccessful += 1
-                pass
-            total += 1
+    for chat_id in savvy:
+        try:
+            await broadcast_msg.copy(chat_id)
+            successful += 1
+        except FloodWait as e:
+            await asyncio.sleep(e.x)
+            await broadcast_msg.copy(chat_id)
+           successful += 1
+        except UserIsBlocked:
+            await del_user(chat_id)
+            blocked += 1
+        except InputUserDeactivated:
+            await del_user(chat_id)
+            deleted += 1
+        except:
+            unsuccessful += 1
+            pass
+        total += 1
+
 
         group_chats = len(chats) - len(users)
         status = f"""<b><u>Broadcast Completed</u>
