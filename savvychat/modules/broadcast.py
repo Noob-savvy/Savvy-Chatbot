@@ -33,7 +33,7 @@ async def send_text(client: savvychat, message: Message):
         except FloodWait as e:
             await asyncio.sleep(e.x)
             await broadcast_msg.copy(chat_id)
-           successful += 1
+            successful += 1
         except UserIsBlocked:
             await del_user(chat_id)
             blocked += 1
