@@ -4,19 +4,18 @@ from typing import Callable
 from pyrogram.types import Message
 from pyrogram import filters
 
-from savvychat import savvychat as Client
+from savvychat import OWNER, savvychat as Client
 from savvychat.database.chats import get_served_chats
 from savvychat.database.users import get_served_users
 
 uname = {Client.username}
 
 
-SUDO_USERS.append(1669178360)
 
 
 def sudo_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
-        if message.from_user.id in SUDO_USERS:
+        if message.from_user.id in OWNER:
             return await func(client, message)
 
     return decorator
