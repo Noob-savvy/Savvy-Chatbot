@@ -4,7 +4,7 @@ from typing import Callable
 from pyrogram.types import Message
 from pyrogram import filters
 
-from savvychat import bot as Client
+from savvychat import savvychat as Client
 from savvychat.database.chats import get_served_chats
 from savvychat.database.users import get_served_users
 
