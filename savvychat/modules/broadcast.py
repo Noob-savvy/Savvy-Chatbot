@@ -15,7 +15,10 @@ uname = {Client.username}
 
 def sudo_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
-        if message.from_user.id in OWNER:
+        
+        if str(message.from_user.id) == OWNER:
+             # Your code here
+
             return await func(client, message)
 
     return decorator
