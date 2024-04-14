@@ -7,7 +7,7 @@ from savvychat import savvychat as app
 from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 
-@app.on_message(filters.command(["chatgpt","ai","ask","gpt","solve"],  prefixes=["+", ".", "/", "-", "", "$","#","&"]))
+@app.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "", "$","#","&"]))
 async def chat_gpt(bot, message):
     try:
         start_time = time.time()
@@ -28,7 +28,7 @@ async def chat_gpt(bot, message):
                     end_time = time.time()
                     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
                     await message.reply_text(
-                         f"➢ {x}  \n\n✦ ᴀɴsᴡᴇʀɪɴɢ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) \n\n✦ ᴀɪ ᴍᴏᴅᴇʟ ➠ [ᴄʜᴀᴛ-ɢᴘᴛ](https://chat.openai.ai) ",
+                         f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n➢ {x} \n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n\n✦ ᴀɴsᴡᴇʀɪɴɢ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) \n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
                         parse_mode=ParseMode.MARKDOWN
                     )
                 else:
