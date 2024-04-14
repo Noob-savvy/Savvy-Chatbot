@@ -31,3 +31,11 @@ flask
 gpytranslate
 img2pdf
 
+
+#img_gen
+huggingface
+diffusers 
+transformers 
+accelerate
+torch
+
