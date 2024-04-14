@@ -4,6 +4,7 @@ import requests
 from pyrogram import Client, filters
 from savvychat import savvychat as app
 
+
 @app.on_message(filters.command(["gen"], prefixes="/"))
 async def generate_image(client, message):
     try:
@@ -41,9 +42,9 @@ async def generate_image(client, message):
             )
             await client.send_photo(message.chat.id, response.content, caption=caption, reply_to_message_id=message.message_id)
         else:
-            await client.reply_to(message, "Please provide a prompt after the /gen command. For example, /gen YourPromptHere")
+            await message.reply("Please provide a prompt after the /gen command. For example, /gen YourPromptHere")
     except Exception as e:
         error_message = f"An error occurred: {str(e)}"
-        await client.reply_to(message, error_message)
+        await message.reply(error_message)
 
 
