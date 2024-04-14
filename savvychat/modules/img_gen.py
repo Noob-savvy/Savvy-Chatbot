@@ -3,7 +3,7 @@ import json
 import requests
 from pyrogram import Client, filters
 from savvychat import savvychat as app
-
+from config import segmind_api_key
 
 @app.on_message(filters.command(["gen"], prefixes="/"))
 async def generate_image(client, message):
