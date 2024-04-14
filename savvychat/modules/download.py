@@ -59,7 +59,7 @@ async def download_song(_, message):
             audio_file,
             thumb=thumb_name,
             title=title,
-            caption=f"{title}\nRequested by: {message.from_user.mention}\nViews: {views}\nChannel: {channel_name}",
+            caption=f"{title}\nRequested by: {message.from_user.mention}\nViews: {views}\nChannel: {channel_name}\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username})",
             duration=dur
         )
         await m.delete()
@@ -216,7 +216,7 @@ async def ytmusic(client, message: Message):
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"❄ **ᴛɪᴛʟᴇ :** [{thum}]({mo})\n💫 **ᴄʜᴀɴɴᴇʟ :** {thums}\n✨ **sᴇᴀʀᴄʜᴇᴅ :** {urlissed}\n🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {chutiya} \n❁ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) "
+    capy = f"❄ **ᴛɪᴛʟᴇ :** [{thum}]({mo})\n💫 **ᴄʜᴀɴɴᴇʟ :** {thums}\n✨ **sᴇᴀʀᴄʜᴇᴅ :** {urlissed}\n🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {chutiya} \n⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username}) "
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
