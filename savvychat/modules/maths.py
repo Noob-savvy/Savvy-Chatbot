@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from savvychat import savvychat
 
-@savvychat.on_message(filters.command("math", prefixes="/"))
+@savvychat.on_message(filters.command(["math","solve"], prefixes="/"))
 def calculate_math(client, message):   
     expression = message.text.split("/math ", 1)[1]
     try:        
