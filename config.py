@@ -23,7 +23,7 @@ MONGO_DB_URL = getenv("MONGO_DB_URL", None)
 # ------------------------------------------------
 LOGGER_ID = -1002055978397
 # ------------------------------------------------
- segmind_api_key = "SG_13b6adf2cc4bb320"
+segmind_api_key = "SG_13b6adf2cc4bb320"
 
 SUPPORT_GRP = "savvy_robot_support"
 UPDATE_CHNL = "Savvy_robot_update"
