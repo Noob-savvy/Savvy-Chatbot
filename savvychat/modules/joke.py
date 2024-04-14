@@ -11,5 +11,5 @@ async def joke(_, message):
     r = response.json()
     joke_text = r['jokeContent']
     await divy.edit_text(
-        f"✦ {joke_text} \n\n ❁ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username})\n❁ ᴍᴀᴅᴇ ʙʏ ➠ [𝕯𝖎𝖛𝖞𝖆𝖓𝖘𝖍𝖚 𝕽𝖆𝖓𝖆](t.me/about_ranavanshi_divy)"
+        f"✦ {joke_text} \n\n❁ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [❀᭄ꦿ𝗟 𝗬 𝗞 𝗔 𝗔 [ᴬᶦ]](t.me/{app.username})\n❁ ᴍᴀᴅᴇ ʙʏ ➠ [𝕯𝖎𝖛𝖞𝖆𝖓𝖘𝖍𝖚 𝕽𝖆𝖓𝖆](t.me/about_ranavanshi_divy)"
     )
