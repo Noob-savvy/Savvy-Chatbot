@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from savvychat import savvychat
 
 @savvychat.on_message(filters.command(["math","solve"], prefixes="/"))
-def calculate_math(client, message):
+async def calculate_math(client, message):
     divy = await message.reply_text(".......SOLVING....... ") 
     await asyncio.sleep(1.3)
     await divy.edit("➗")
