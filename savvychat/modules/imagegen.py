@@ -8,7 +8,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from savvychat.modules.helpers.inline import SETTINGS
 from savvychat.modules.callbacks import (
     help_callback,
-    about_callback,
     settings_callback,
     choose_model_callback,
     selected_model_callback,
