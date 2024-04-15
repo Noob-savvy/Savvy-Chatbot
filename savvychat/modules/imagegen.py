@@ -126,7 +126,7 @@ async def generate(bot, update: Message):
                 text = f"Failed to generate Image \nCreate an issue here"
                 error = f"ERROR: {(str(e))}"
                 
-                )
+                
                 await update.reply_text(
                     text,
                     disable_web_page_preview=True,
