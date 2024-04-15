@@ -7,8 +7,8 @@ from savvychat import savvychat as app
 
 from config import SUPPORT_GRP
 from savvychat.modules.helpers import (
-    help_1
-    help_2
+    help_1,
+    help_2,
     )
 from savvychat.modules.helpers.help import *
 from savvychat.modules.helpers import read
