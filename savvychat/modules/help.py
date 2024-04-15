@@ -28,7 +28,7 @@ async def helper_private(
         except:
             pass
         chat_id = update.message.chat.id
-        keyboard = help_pannel()
+        keyboard = help_pannel(_, True)
         await update.edit_message_text(
             help_1.format(SUPPORT_GRP), reply_markup=keyboard
         )
@@ -47,7 +47,7 @@ async def helper_private(
 
 @app.on_message(filters.command(["help"]) & filters.group)
 
-async def help_com_group(client, message: Message, _):
+async def help_com_group(client, message: Message, **kwargs):
     keyboard = private_help_panel(_)
     await message.reply_text(
         help_2, reply_markup=InlineKeyboardMarkup(keyboard)
@@ -56,7 +56,7 @@ async def help_com_group(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("help_callback"))
 
-async def helper_cb(client, CallbackQuery, _):
+async def helper_cb(client, CallbackQuery, **kwargs):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = help_back_markup(_)
