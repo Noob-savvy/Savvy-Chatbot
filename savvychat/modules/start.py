@@ -135,4 +135,4 @@ async def start(_, m: Message):
 @savvychat.on_message(filters.new_chat_members)
 async def welcome(_, m: Message):
     for member in m.new_chat_members:
-        await m.reply_photo(photo=random.choice(IMG), caption=START.format(chutiya,NAME), reply_markup=InlineKeyboardMarkup(DEV_OP)
+        await m.reply_photo(photo=random.choice(IMG), caption=START.format(chutiya,NAME), reply_markup=InlineKeyboardMarkup(DEV_OP))
