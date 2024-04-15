@@ -37,7 +37,7 @@ async def helper_private(
             await update.delete()
         except:
             pass
-        keyboard = help_pannel()
+        keyboard = help_pannel(_)
         await update.reply_photo(
             photo=START_IMG_URL,
             caption=help_1.format(SUPPORT_GRP),
@@ -48,7 +48,7 @@ async def helper_private(
 @app.on_message(filters.command(["help"]) & filters.group)
 
 async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel()
+    keyboard = private_help_panel(_)
     await message.reply_text(
         help_2, reply_markup=InlineKeyboardMarkup(keyboard)
           )
@@ -59,7 +59,7 @@ async def help_com_group(client, message: Message, _):
 async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
-    keyboard = help_back_markup()
+    keyboard = help_back_markup(_)
     if cb == "hb1":
         await CallbackQuery.edit_message_text(read.HELP_1, reply_markup=keyboard)
     elif cb == "hb2":
