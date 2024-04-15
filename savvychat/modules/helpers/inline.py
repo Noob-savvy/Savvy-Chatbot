@@ -1,5 +1,5 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from models import MODELS
+from savvychat.modules.helpers.models import MODELS
 from config import SUPPORT_GRP, UPDATE_CHNL
 from savvychat import OWNER
 from savvychat import savvychat
